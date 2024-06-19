@@ -36,3 +36,12 @@
     transform: rotate(360deg);
   }
 }
+
+body {
+  background: #132945;
+}
+
+.flex-important {
+  @apply flex;
+  display: flex !important;
+}

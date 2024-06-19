@@ -10,29 +10,35 @@ const WeatherForm = ({ onFetchWeather }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="mb-4">
+    <form
+      onSubmit={handleSubmit}
+      className="mb-5 py-5 flex-wrap flex-important justify-center gap-5"
+    >
       <input
-        type="text"
+        type="number"
         placeholder="Latitude"
         value={location.lat}
         onChange={(e) => setLocation({ ...location, lat: e.target.value })}
-        className="mr-2 p-2 border"
+        className="py-2 px-5 border block rounded-2xl sm:w-full md:w-1/4 lg:w-auto w-full"
       />
       <input
-        type="text"
+        type="number"
         placeholder="Longitude"
         value={location.lon}
         onChange={(e) => setLocation({ ...location, lon: e.target.value })}
-        className="mr-2 p-2 border"
+        className="py-2 px-5 border block rounded-2xl sm:w-full md:w-1/4 lg:w-auto w-full"
       />
       <input
         type="date"
         value={date}
         onChange={(e) => setDate(e.target.value)}
-        className="p-2 border"
+        className="py-2 px-5 border block rounded-2xl sm:w-full md:w-1/4 lg:w-auto w-full"
       />
-      <button type="submit" className="p-2 bg-blue-500 text-white">
-        Fetch Weather
+      <button
+        type="submit"
+        className="py-2 px-5 border block rounded-2xl bg-blue-900 text-white sm:w-full md:w-1/4 lg:w-auto w-full"
+      >
+        View Weather
       </button>
     </form>
   );

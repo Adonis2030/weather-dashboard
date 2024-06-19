@@ -11,7 +11,7 @@ export const fetchWeatherData = async (latitude, longitude, date) => {
         start_date: date,
         end_date: date,
         daily:
-          "weather_code,sunrise,sunset,temperature_2m_max,temperature_2m_min,wind_speed_10m_max,precipitation_probability_max",
+          "weather_code,sunrise,sunset,temperature_2m_max,temperature_2m_min,wind_speed_10m_max,precipitation_sum,daylight_duration,sunshine_duration",
         timezone: "auto",
       },
     });
