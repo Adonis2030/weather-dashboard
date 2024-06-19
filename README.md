@@ -1,70 +1,112 @@
-# Getting Started with Create React App
+# Weather Dashboard
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Description
 
-## Available Scripts
+The Weather Dashboard is a React application that allows users to fetch and display weather data for a specific location and date using the Open Meteo API. The dashboard includes features such as input fields for latitude, longitude, and date, and displays weather information like temperature, precipitation, wind speed, sunrise, sunset, and more in a user-friendly format.
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- Fetch and display weather data for a given location (latitude and longitude) and date.
+- Input fields for latitude, longitude, and date.
+- Display weather information including:
+  - Max Temperature
+  - Min Temperature
+  - Precipitation
+  - Max Wind Speed
+  - Sunrise
+  - Sunset
+  - Daylight Duration
+  - Sunshine Duration
+  - Weather Code
+- Responsive design using Tailwind CSS.
+- Error handling and loading states.
+- Unit tests with Jest and React Testing Library.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Technologies Used
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- React
+- Tailwind CSS
+- Toastify Notification Library
+- Axios
+- Open Meteo API
+- Jest
+- React Testing Library
 
-### `npm test`
+## Setup Instructions
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. **Clone the repository:**
 
-### `npm run build`
+   ```bash
+   git clone https://github.com/yourusername/weather-dashboard.git
+   cd weather-dashboard
+   ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. **Install dependencies:**
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+   ```bash
+   npm install
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+3. **Start the development server:**
 
-### `npm run eject`
+   ```bash
+   npm start
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- The application will run at `http://localhost:3000`.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Usage
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+1. Enter the latitude and longitude of the desired location
+2. Select the date for which you want to fetch the weather data.
+3. Click the "View Weather" button to retrieve and display the weather information.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Testing
 
-## Learn More
+To run the test, use the following command:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+    ```bash
+    npm test
+    ```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+The test use Jest and React Testing Library to verify that the application renders correctly and handles user interactions properly.
 
-### Code Splitting
+- App.test.js
+- WeatherDashboard.test.js
+- WeatherForm.test.js
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Project Structure
 
-### Analyzing the Bundle Size
+Weather-Dashboard/
+├── node_modules/
+├── public/
+├── src/
+│ ├── assets/
+│ │ ├── loading.gif
+│ │ └── svgs
+│ ├── components/
+│ │ ├── Landing.js
+│ │ ├── svgGroup.js
+│ │ ├── WeatherCard.js
+│ │ ├── WeatherDashboard.js
+│ │ ├── WeatherDashboard.test.js
+│ │ ├── WeatherForm.js
+│ │ ├── WeatherForm.test.js
+│ │ └── WeatherMain.js
+│ ├── services/
+│ │ └── weatherService.js
+│ ├── App.js
+│ ├── App.test.js
+│ ├── index.js
+│ ├── index.css
+│ └── setupTests.js
+├── .babelrc
+├── package-lock.json
+├── postcss.config.js
+├── package.json
+├── README.md
+└── tailwind.config.js
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## API Reference
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- This application uses the **Open Meteo API** to fetch weather data.

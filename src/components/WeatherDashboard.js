@@ -24,6 +24,7 @@ const WeatherDashboard = () => {
 
       if (data && data.daily) {
         setWeatherData(data);
+        console.log(data);
         const weatherCode = data.daily.weather_code;
         weatherChange(weatherCode);
       } else {

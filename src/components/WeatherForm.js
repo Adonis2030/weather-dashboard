@@ -43,6 +43,7 @@ const WeatherForm = ({ onFetchWeather }) => {
         <input
           type="date"
           value={date}
+          placeholder="Date"
           onChange={(e) => setDate(e.target.value)}
           className="py-2 px-5 border block rounded-2xl sm:w-45 md:w-45 lg:w-auto w-full"
         />
