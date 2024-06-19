@@ -62,12 +62,14 @@ The Weather Dashboard is a React application that allows users to fetch and disp
 3. Click the "View Weather" button to retrieve and display the weather information.
 
 ![image](https://github.com/Adonis2030/weather-dashboard/assets/133148501/e0cad2c6-d658-496d-8a5c-44107a4f5921)
+![image](https://github.com/Adonis2030/weather-dashboard/assets/133148501/9d13b2c4-e1b2-4b7d-a7bc-04bcc517134e)
+![image](https://github.com/Adonis2030/weather-dashboard/assets/133148501/354a79ca-0e82-49f4-84dd-ae81879c8681)
 
 ## Testing
 
 To run the test, use the following command:
 
-    ```bash
+    ```
     npm test
     ```
 
