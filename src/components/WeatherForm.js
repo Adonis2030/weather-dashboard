@@ -31,24 +31,24 @@ const WeatherForm = ({ onFetchWeather }) => {
           placeholder="Latitude"
           value={location.lat}
           onChange={(e) => setLocation({ ...location, lat: e.target.value })}
-          className="py-2 px-5 border block rounded-2xl sm:w-full md:w-1/4 lg:w-auto w-full"
+          className="py-2 px-5 border block rounded-2xl sm:w-45 md:w-45 lg:w-auto w-full"
         />
         <input
           type="number"
           placeholder="Longitude"
           value={location.lon}
           onChange={(e) => setLocation({ ...location, lon: e.target.value })}
-          className="py-2 px-5 border block rounded-2xl sm:w-full md:w-1/4 lg:w-auto w-full"
+          className="py-2 px-5 border block rounded-2xl sm:w-45 md:w-45 lg:w-auto w-full"
         />
         <input
           type="date"
           value={date}
           onChange={(e) => setDate(e.target.value)}
-          className="py-2 px-5 border block rounded-2xl sm:w-full md:w-1/4 lg:w-auto w-full"
+          className="py-2 px-5 border block rounded-2xl sm:w-45 md:w-45 lg:w-auto w-full"
         />
         <button
           type="submit"
-          className="py-2 px-5 border block rounded-2xl bg-blue-900 text-white sm:w-full md:w-1/4 lg:w-auto w-full"
+          className="py-2 px-5 border block rounded-2xl bg-blue-900 text-white sm:w-45 md:w-45 lg:w-auto w-full"
         >
           View Weather
         </button>

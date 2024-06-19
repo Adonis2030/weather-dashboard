@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import { fetchWeatherData } from "../services/weatherService";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 import WeatherForm from "./WeatherForm";
 import WeatherCard from "./WeatherCard";
 import WeatherMain from "./WeatherMain";
@@ -12,11 +15,9 @@ const WeatherDashboard = () => {
   const [weatherStatus, setWeatherStatus] = useState("");
   const [weatherIcon, setWeatherIcon] = useState(null);
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState("");
 
   const handleFetchWeather = async (location, date) => {
     setLoading(true);
-    setError("");
 
     try {
       const data = await fetchWeatherData(location.lat, location.lon, date);
@@ -26,10 +27,20 @@ const WeatherDashboard = () => {
         const weatherCode = data.daily.weather_code;
         weatherChange(weatherCode);
       } else {
-        throw new Error("Invalid data format received");
+        toast.error("Invalid data format received", {
+          position: "top-right",
+          autoClose: 2000,
+          pauseOnHover: true,
+          theme: "dark",
+        });
       }
     } catch (err) {
-      setError(err.message);
+      toast.error(err.message, {
+        position: "top-right",
+        autoClose: 2000,
+        pauseOnHover: true,
+        theme: "dark",
+      });
     } finally {
       setLoading(false);
     }
@@ -60,10 +71,10 @@ const WeatherDashboard = () => {
       </h1>
       <WeatherForm onFetchWeather={handleFetchWeather} />
       {loading && <Loading />}
-      {error && <p className="text-red-500">{error}</p>}
+      <ToastContainer />
       {weatherData && (
         <div className="grid grid-cols-5 gap-4">
-          <div className="border rounded-lg grid col-span-2 bg-gradient-to-b from-blue-500 to-blue-900 py-5">
+          <div className="border rounded-lg grid col-span-5 lg:col-span-2 md:col-span-2 sm:col-span-5 bg-gradient-to-b from-blue-500 to-blue-900 py-5">
             <WeatherMain
               icon={weatherIcon}
               LocationIcon={SvgGroup.Location}
@@ -77,7 +88,7 @@ const WeatherDashboard = () => {
               tempMinUnit={weatherData.daily_units.temperature_2m_min}
             />
           </div>
-          <div className="col-span-3 grid grid-cols-2 gap-5">
+          <div className="col-span-5 lg:col-span-3 md:col-span-3 sm:col-span-5 grid grid-cols-2 gap-5">
             <WeatherCard
               icon={SvgGroup.WindSpeed}
               title="Wind Speed"

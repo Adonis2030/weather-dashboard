@@ -12,6 +12,9 @@ module.exports = {
         md: "4rem",
         lg: "6rem",
       },
+      width: {
+        45: "45%",
+      },
     },
   },
   plugins: [],
