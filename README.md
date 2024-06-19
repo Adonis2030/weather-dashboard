@@ -61,6 +61,8 @@ The Weather Dashboard is a React application that allows users to fetch and disp
 2. Select the date for which you want to fetch the weather data.
 3. Click the "View Weather" button to retrieve and display the weather information.
 
+![image](https://github.com/Adonis2030/weather-dashboard/assets/133148501/e0cad2c6-d658-496d-8a5c-44107a4f5921)
+
 ## Testing
 
 To run the test, use the following command:
@@ -74,38 +76,6 @@ The test use Jest and React Testing Library to verify that the application rende
 - App.test.js
 - WeatherDashboard.test.js
 - WeatherForm.test.js
-
-## Project Structure
-
-Weather-Dashboard/
-├── node_modules/
-├── public/
-├── src/
-│ ├── assets/
-│ │ ├── loading.gif
-│ │ └── svgs
-│ ├── components/
-│ │ ├── Landing.js
-│ │ ├── svgGroup.js
-│ │ ├── WeatherCard.js
-│ │ ├── WeatherDashboard.js
-│ │ ├── WeatherDashboard.test.js
-│ │ ├── WeatherForm.js
-│ │ ├── WeatherForm.test.js
-│ │ └── WeatherMain.js
-│ ├── services/
-│ │ └── weatherService.js
-│ ├── App.js
-│ ├── App.test.js
-│ ├── index.js
-│ ├── index.css
-│ └── setupTests.js
-├── .babelrc
-├── package-lock.json
-├── postcss.config.js
-├── package.json
-├── README.md
-└── tailwind.config.js
 
 ## API Reference
 
